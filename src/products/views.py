@@ -9,4 +9,6 @@ def home_view(request,*args,**kwargs):
                   context={})
 
 def contact_view(request,*args,**kwargs):
-    return HttpResponse("<h1> contact page </h1>")
+    return render(request=request,
+                  template_name="contact.html",
+                  context={})
