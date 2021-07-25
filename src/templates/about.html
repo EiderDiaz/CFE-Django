@@ -11,7 +11,16 @@
 
 <ul>
 {% for my_itemlist in my_list %}
-    <li> {{forloop.counter}} - {{my_itemlist}} </li>
+    {% if my_itemlist == 123 %}
+    <!-- template tag for foorloop iteration  ---- and template tag for adding 22 (|add:22) -->
+        <li> {{forloop.counter}} - {{my_itemlist|add:22}} </li>
+    {% elif  my_itemlist == 456 %}
+        <li> {{forloop.counter}} - {{my_itemlist|add:-36}} </li>
+    {% else %}
+        <li> {{forloop.counter}} - {{my_itemlist}} </li>
+
+    {% endif %}
+
     {% endfor %}
 </ul>
 
